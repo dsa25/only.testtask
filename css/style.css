@@ -1,0 +1,191 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+}
+:root {
+  --font_family: Arial, sans-serif;
+  --widthImg: 1920;
+  --heightImg: 1080;
+  --btnBgColor: #3877eeb3;
+  --btnBgColorHover: #3877ee;
+  --btnBgColorTwo: #6abf4bb3;
+  --btnBgColorTwoHover: #6abf4b;
+  --btnColor: #fff;
+}
+
+html,
+body {
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  font: 16px var(--font_family);
+  min-width: 1280px;
+  background: #f6f6f6;
+  color: #000;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  /* min-width: 1280px;
+  min-height: 600px; */
+  background: url("../img/main.jpg") 0 0 no-repeat;
+  background-size: 100% 100%;
+  /* background-size: 100% auto; */
+  /* background-size: cover; */
+  position: relative;
+}
+/* в макете фон есть #020f20 и opacity: 0.4 */
+.main::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: #020f20;
+  opacity: 0.4;
+  z-index: 2;
+}
+
+.btn {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  font-family: var(--font_family);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: center;
+  white-space: nowrap;
+  padding: 0;
+  height: 41px;
+  width: 41px;
+  cursor: pointer;
+  background: var(--btnBgColor);
+  border: none;
+  color: var(--btnColor);
+  box-shadow: none;
+  border-radius: 50%;
+}
+.btn:hover {
+  background: var(--btnBgColorHover);
+}
+.btn.active {
+  width: auto;
+  border-radius: 40px;
+  background: var(--btnBgColorHover);
+}
+.btn.bgColorTwo {
+  background: var(--btnBgColorTwo);
+}
+.btn.bgColorTwo.active,
+.btn.bgColorTwo:hover {
+  background: var(--btnBgColorTwoHover);
+}
+.btn.active .plus,
+.btn .minus {
+  opacity: 0;
+}
+.btn.active .minus,
+.btn .plus {
+  opacity: 1;
+}
+.btn .minus {
+  margin-top: -2px;
+}
+.btn__sign {
+  position: relative;
+  display: inline-block;
+  padding: 0 15px;
+  font-size: 20px;
+  height: 100%;
+  width: 41px;
+}
+.btn__sign > span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: opacity linear 0.3s;
+}
+.btn__text {
+  display: none;
+  max-width: 160px;
+  padding-right: 15px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn.active .btn__text {
+  display: inline-block;
+}
+
+.btn__one {
+  top: calc(282 / var(--heightImg) * 100%);
+  left: calc(580 / var(--widthImg) * 100%);
+  /* top: 26%; */
+  /* left: 30%; */
+}
+.btn__two {
+  top: calc(225 / var(--heightImg) * 100%);
+  left: calc(1373 / var(--widthImg) * 100%);
+  /* top: 21%; */
+  /* left: 71.5%; */
+}
+.btn__three {
+  top: calc(404 / var(--heightImg) * 100%);
+  left: calc(1148 / var(--widthImg) * 100%);
+  /* top: 37.2%; */
+  /* left: 59.8%; */
+}
+.btn__four {
+  top: calc(482 / var(--heightImg) * 100%);
+  left: calc(687 / var(--widthImg) * 100%);
+  /* top: 44.5%; */
+  /* left: 35.6%; */
+}
+.btn__five {
+  top: calc(475 / var(--heightImg) * 100%);
+  left: calc(1414 / var(--widthImg) * 100%);
+  /* top: 44%; */
+  /* left: 73.6%; */
+}
+.btn__six {
+  top: calc(629 / var(--heightImg) * 100%);
+  left: calc(1081 / var(--widthImg) * 100%);
+  /* top: 58%; */
+  /* left: 56.3%; */
+}
+.btn__seven {
+  top: calc(714 / var(--heightImg) * 100%);
+  left: calc(446 / var(--widthImg) * 100%);
+  /* top: 66.1%; */
+  /* left: 23.1%; */
+}
+.btn__eight {
+  top: calc(669 / var(--heightImg) * 100%);
+  left: calc(1306 / var(--widthImg) * 100%);
+  /* top: 62%; */
+  /* left: 68%; */
+}
+.btn__nine {
+  top: calc(713 / var(--heightImg) * 100%);
+  left: calc(1593 / var(--widthImg) * 100%);
+  /* top: 66%; */
+  /* left: 83%; */
+}
+.btn__ten {
+  top: calc(790 / var(--heightImg) * 100%);
+  left: calc(1107 / var(--widthImg) * 100%);
+  /* top: 73.2%; */
+  /* left: 57.7%; */
+}
